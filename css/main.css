@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Cantarell|Raleway&display=swap');
+
+
+:root {
+    height: 100vh;
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+section {
+    font-size: 1rem;
+    font-family: "Times New Roman", Times, serif;
+    min-height: 100%;
+    background-image: url('/images/flsh.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+img {
+    max-width: 200%;
+    height: auto;;
+}
+
+#mainHeader{
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    align-items: start;
+    background-color: #009966;
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+#logoImg{
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+}
+#mainNav{
+    position: absolute;
+    /* background-color: var(--red); */
+    width: 100%;
+    top: 40px;
+    padding-bottom: 10px;
+    display: none;
+}
+#mainNav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    margin-left: 90px;
+}
+#mainNav button{
+    border: none;
+    color:rgb(255, 255, 255);
+    background-color: #009966;
+    text-decoration: none;
+    font-family: Cantarell, Arial, sans-serif;
+    font-size: 1.5em;
+    display: block;
+    margin: 0px;
+}
+#mainNav button:hover{
+    color: white;
+    text-shadow: 3px 3px 3px black;
+}
+
+#menuToggle{
+    background-color: transparent;
+    border: none;
+    background-size: cover;
+    width: 40px;
+    height: 40px;;
+    align-self: start;
+    margin-left: auto;
+}
+#menuToggle.hamburger{
+    background-image: url(../images/layout/hamburger.png);
+}
+#pageContent {
+    font-size: 30px;
+    padding: 100px 20px;
+    min-height: 100vh;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#pageContent.home{
+    display: block;
+    /* margin-top: 30px; */
+    /* justify-content: center;
+    align-items: flex-end; */
+}
+
+
+#mainFooter{
+    background-color: #3ddd6d;
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    color: white;
+    font-size: .8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bd{
+    padding-top:70px;
+}
+
+@media screen and (min-width: 768px){
+    #mainNav{
+        position: static;
+        background: transparent;
+        display: flex;
+        margin-right: 10px;
+        justify-content: flex-end;
+    }
+    #mainNav ul{
+        flex-flow: row nowrap;
+        padding-left: 25px;
+    }
+    #mainNav a{
+        font-size: 1.2em;
+    }   
+    #mainNav li {
+        margin-right: 50px; 
+    }
+    #pageContent.home{
+        justify-content: flex-end;
+    }
+}
+
+#tm{
+    margin-left: 50px;
+    margin-top: 80px;
+}
